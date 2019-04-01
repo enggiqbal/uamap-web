@@ -1,0 +1,14 @@
+2019-02-05T23:48:48.709+0000 I CONTROL  [initandlisten] MongoDB starting : pid=68 port=27017 dbpath=/data/db 64-bit host=5ad31168e64b
+2019-02-05T23:48:48.711+0000 I CONTROL  [initandlisten] db version v3.6.3
+2019-02-05T23:48:48.713+0000 I CONTROL  [initandlisten] git version: 9586e557d54ef70f9ca4b43c26892cd55257e1a5
+2019-02-05T23:48:48.714+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t  3 May 2016
+2019-02-05T23:48:48.716+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2019-02-05T23:48:48.717+0000 I CONTROL  [initandlisten] modules: none
+2019-02-05T23:48:48.718+0000 I CONTROL  [initandlisten] build environment:
+2019-02-05T23:48:48.719+0000 I CONTROL  [initandlisten]     distmod: debian81
+2019-02-05T23:48:48.720+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2019-02-05T23:48:48.721+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-02-05T23:48:48.722+0000 I CONTROL  [initandlisten] options: { net: { port: 27017 }, processManagement: { fork: true }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db" }, systemLog: { destination: "file", path: "mongod.log" } }
+2019-02-05T23:48:48.724+0000 I STORAGE  [initandlisten] exception in initAndListen: DBPathInUse: Unable to lock the lock file: /data/db/mongod.lock (Resource temporarily unavailable). Another mongod instance is already running on the /data/db directory, terminating
+2019-02-05T23:48:48.725+0000 I CONTROL  [initandlisten] now exiting
+2019-02-05T23:48:48.726+0000 I CONTROL  [initandlisten] shutting down with code:100

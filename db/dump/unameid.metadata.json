@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"uamap.unameid"},{"v":2,"key":{"gsid":1},"name":"gsid_1","ns":"uamap.unameid"},{"v":2,"key":{"uname":1},"name":"uname_1","ns":"uamap.unameid"}]}

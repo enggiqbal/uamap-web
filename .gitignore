@@ -1,0 +1,8 @@
+XDockerfile
+*.DS_Store
+__pycache__
+dockerinsidecommand
+docker.clean
+researchtopicscorpus.txt
+uamap-docker
+*.pyc

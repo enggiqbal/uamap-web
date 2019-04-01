@@ -1,0 +1,39 @@
+# see UAMAP-license.txt
+
+version: '3'
+services:
+  mongodb:
+    image: mongo:3
+    container_name: mongodb_container
+    restart: always
+    ports:
+      - "27017:27017"
+
+
+
+  mongosetup:
+    image: mongo:3
+    volumes:
+      - ./db/dump:/dump
+      - .:/code
+    working_dir: /code
+    command: bash -c "mongo  --host mongodb_container admin mongosetup.js && mongorestore --host mongodb -d uamap /dump"
+    depends_on:
+      - mongodb
+
+  web:
+    container_name: uamap
+    image: python:3
+    volumes:
+      - .:/code
+    working_dir: /code
+    environment:
+      mogoconnection: mongodb://hossain:myMPassForDocker819@mongodb_container:27017
+
+    command: bash -c "pip install -r requirements.txt && python3 manage.py runserver 0.0.0.0:8000"
+    ports:
+     - "8080:8000"
+    depends_on:
+      - mongodb
+    links:
+      - mongodb:mongo

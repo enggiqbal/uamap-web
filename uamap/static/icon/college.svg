@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <defs/>
+    <g>
+        <g latexdraw:type="line" id="id34">
+            <line x1="20.0" x2="50.0" y1="30.0" y2="20.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id35">
+            <line x1="40.0" x2="50.0" y1="30.0" y2="20.0"
+                stroke-width="0.800000011920929" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id36">
+            <line x1="22.0" x2="40.0" y1="30.0" y2="50.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id37">
+            <line x1="10.0" x2="20.0" y1="30.0" y2="50.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id38">
+            <line x1="20.0" x2="40.0" y1="50.0" y2="30.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id39">
+            <line x1="40.0" x2="40.0" y1="30.0" y2="50.0"
+                stroke-width="0.800000011920929" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id40">
+            <line x1="20.0" x2="40.0" y1="10.0" y2="30.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id41">
+            <line x1="10.0" x2="20.0" y1="30.0" y2="10.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id42">
+            <line x1="20.0" x2="50.0" y1="10.0" y2="20.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id43">
+            <line x1="20.0" x2="22.0" y1="10.0" y2="30.0"
+                stroke-width="0.800000011920929" stroke="#010101" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id44" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="40.0 30.0">
+            <circle r="2.0" fill="red" cx="40.0" cy="30.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id45" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="20.0 10.0">
+            <circle r="2.0" fill="red" cx="20.0" cy="10.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id46" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="10.0 30.0">
+            <circle r="2.0" fill="black" cx="10.0" cy="30.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id47" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="22.0 30.0">
+            <circle r="2.0" fill="red" cx="22.0" cy="30.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id48" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="40.0 50.0">
+            <circle r="2.0" fill="red" cx="40.0" cy="50.0"/>
+        </g>
+        <g latexdraw:type="dot" id="id49" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="50.0 20.0">
+            <circle r="2.0" fill="black" cx="50.0" cy="20.0"/>
+        </g>
+        <g latexdraw:type="text" id="id50" font-family="Times New Roman"
+            fill="black" font-size="11" latexdraw:x="10.0">
+            <text x="10.0" y="63.0"><![CDATA[College]]></text>
+        </g>
+        <g latexdraw:type="dot" id="id53" latexdraw:size="4.0"
+            latexdraw:dotShape="dot" latexdraw:position="20.0 50.0">
+            <circle r="2.0" fill="black" cx="20.0" cy="50.0"/>
+        </g>
+    </g>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:displayBorders>false</latexdraw:displayBorders>
+            <latexdraw:autoAdjust>true</latexdraw:autoAdjust>
+            <latexdraw:ppc>50</latexdraw:ppc>
+            <latexdraw:zoom>4.5</latexdraw:zoom>
+            <latexdraw:unit>cm</latexdraw:unit>
+            <latexdraw:classicGrid>false</latexdraw:classicGrid>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:code>0</latexdraw:code>
+            <latexdraw:displayGrid>true</latexdraw:displayGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:autoUpdate>true</latexdraw:autoUpdate>
+            <latexdraw:version>2.0.8</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1680</latexdraw:width>
+                <latexdraw:height>1002</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0</latexdraw:x>
+                <latexdraw:y>24</latexdraw:y>
+            </latexdraw:position>
+            <latexdraw:dividerPosition>0.6107142857142858</latexdraw:dividerPosition>
+            <latexdraw:displayCodePanel>true</latexdraw:displayCodePanel>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:delimitorOpacity>130</latexdraw:delimitorOpacity>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
