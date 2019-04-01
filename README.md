@@ -23,7 +23,7 @@ For docker and docker composer please visit [docker website](https://www.docker.
 load application in the borwser at `PORT`
 default home page: http://localhost:8080/   topics map: http://localhost:8080/topics/
 ## Optional parameters settings
-- change `mongodb` username and password at `docker-compose.yml`
+- change `mongodb` username and password at `docker-compose.yml` and `mongosetup.js`
 - change google maps api key at `uamap/templates/topics2.html`
 ```
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=`YOUR_GOOGLE_MAPS_API_KEY`&callback=initMap&libraries=visualization">
