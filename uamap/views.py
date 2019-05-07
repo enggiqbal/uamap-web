@@ -9,7 +9,7 @@ from django.http import HttpResponseForbidden
 from django.views.generic.base import View
 from subprocess import Popen, PIPE
 import random
-
+from django.http import JsonResponse
 #class HomePageView(View):
 from django.views.decorators.cache import cache_page
 
@@ -38,6 +38,52 @@ def dispatch(request, *args, **kwargs):
             </html>
         ''')
         return HttpResponse(response_text)
+
+
+def addmycontent(request):
+	data="<form><h1>Add my content</h1>"
+	data=data+"<h2>Net id</h2><input type=text id='netid' name=netid><br>"
+	data=data+"<h2>URL represent research (one url per line)</h2>"
+	data=data+ "<textarea rows=10 cols=60 id=urls></textarea>"
+	data=data+"<h2>Papers represent my research (pdf)</h2>"
+	data=data+'  <div class="upload-area"  id="uploadfile"> <h2 id="droptxt">Drag and Drop file here<br/>Or<br/>Click to select file</h2>  </div>'
+	data=data+"<h2>Grant proposals represent my research(pdf)</h2></form>"
+
+	return render(request, 'addmycontent.html', {'data':''})
+
+def contentsubmit(request):
+    netid=request.POST['netid']
+    urls=request.POST['urls']
+    category=request.POST['category']
+
+    f=request.FILES['file']
+
+    name=f.name
+    if name[-4:].lower()!=".pdf":
+        data={'name':'error','size':0,'src':''}
+        return JsonResponse(data)
+
+    data={'name':name,'size':f.size,'src':'', 'category':category}
+    name=f.name.replace(" ","_")
+    name=netid + "_" +  category + "_" +name
+    handle_uploaded_file(f,name)
+
+    uf.savecontent_info_to_db(netid,name, f.size,category, urls)
+
+    return JsonResponse(data)
+
+
+
+def handle_uploaded_file(f,name):
+    if not os.path.exists("/pdfs"):
+        os.makedirs("/pdfs")
+    destination = open('/pdfs/' + name, 'wb+')
+    for chunk in f.chunks():
+        destination.write(chunk)
+    destination.close()
+    return name
+
+
 
 def getedgeinfo(request, n1, n2, network):
 

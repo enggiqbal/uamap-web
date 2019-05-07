@@ -40,6 +40,10 @@ def getexternaledgeinfo(dummyid):
 
 #	print(data)
 	return data
+	
+def savecontent_info_to_db(netid, name,size, type,urls):
+	t={'netid': netid, 'filename':name, 'filesize': size, 'category': type,'urls':urls}
+	db.pdfs.insert(t)
 
 def geturlcontent(url):
 

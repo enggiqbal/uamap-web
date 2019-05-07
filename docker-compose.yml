@@ -29,8 +29,8 @@ services:
     working_dir: /code
     environment:
       mogoconnection: mongodb://hossain:myMPassForDocker819@mongodb_container:27017
-
     command: bash -c "pip install -r requirements.txt && python3 manage.py runserver 0.0.0.0:8000"
+    
     ports:
      - "8080:8000"
     depends_on:

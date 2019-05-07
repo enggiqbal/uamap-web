@@ -68,5 +68,8 @@ urlpatterns = [
     url(r'^cnetworkV4$', views.cnetworkV4, name='cnetworkV4'),
     url(r'^peoplesearchV4/$', views.peoplesearchV4, name='peoplesearchV4'),
     url(r'^searchV4$', views.searchV4, name='searchV4'),
-
+    url(r'^addmycontent$', views.addmycontent, name='addmycontent'),
+    url(r'^contentsubmit$', views.contentsubmit, name='contentsubmit'),
 ]
+#
+#

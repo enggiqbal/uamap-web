@@ -53,3 +53,89 @@
 [INFO] - 2019-04-01 09:57:52,801 : "GET /searchuniversity/ariz HTTP/1.1" 200 358<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.3', 8000), raddr=('172.18.0.1', 35030)>
 [INFO] - 2019-04-01 09:57:52,822 : "GET /searchuniversity/ariz HTTP/1.1" 200 358<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.3', 8000), raddr=('172.18.0.1', 35032)>
 [INFO] - 2019-04-01 09:57:54,251 : "GET /getuinfo/12195049151929734221/HPU HTTP/1.1" 200 34993<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.3', 8000), raddr=('172.18.0.1', 35034)>
+[INFO] - 2019-05-06 17:11:27,568 : "GET / HTTP/1.1" 200 5727<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34530)>
+[WARNING] - 2019-05-06 17:11:29,259 : Not Found: /favicon.ico<WSGIRequest: GET '/favicon.ico'>
+[WARNING] - 2019-05-06 17:11:29,264 : "GET /favicon.ico HTTP/1.1" 404 6773<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34532)>
+[INFO] - 2019-05-06 17:12:38,666 : "GET / HTTP/1.1" 200 5727<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34562)>
+[INFO] - 2019-05-06 17:12:42,926 : "GET /topics HTTP/1.1" 301 0<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34564)>
+[INFO] - 2019-05-06 17:12:43,173 : "GET /topics/ HTTP/1.1" 200 56066<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34566)>
+[INFO] - 2019-05-06 17:12:43,296 : "GET /static/css/bootstrap.css HTTP/1.1" 200 30182<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34570)>
+[INFO] - 2019-05-06 17:12:43,297 : "GET /static/js/d3_star.js HTTP/1.1" 200 5708<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34576)>
+[INFO] - 2019-05-06 17:12:43,298 : "GET /static/icon/close.png HTTP/1.1" 200 1484<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34572)>
+[INFO] - 2019-05-06 17:12:43,306 : "GET /static/css/ui-lightness/jquery-ui-1.10.3.custom.min.css HTTP/1.1" 200 27155<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34568)>
+[INFO] - 2019-05-06 17:12:43,358 : "GET /static/CACHE/js/dcbc24add851.js HTTP/1.1" 200 4442301<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34574)>
+[INFO] - 2019-05-06 17:12:44,681 : "GET /static/icon/loading.gif HTTP/1.1" 200 9117<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34578)>
+[INFO] - 2019-05-06 17:12:46,639 : "GET /static/icon/images/cite.png HTTP/1.1" 200 1470<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34582)>
+[INFO] - 2019-05-06 17:12:46,642 : "GET /static/icon/money.png HTTP/1.1" 200 1124<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34588)>
+[INFO] - 2019-05-06 17:12:46,662 : "GET /static/icon/images/agg.png HTTP/1.1" 200 874<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34584)>
+[INFO] - 2019-05-06 17:12:46,681 : "GET /static/icon/images/hpu.png HTTP/1.1" 200 5726<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34580)>
+[INFO] - 2019-05-06 17:12:46,682 : "GET /static/icon/images/dept.png HTTP/1.1" 200 2683<socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34586)>
+[INFO] - 2019-05-06 17:12:46,700 : "GET /static/icon/images/clustering.png HTTP/1.1" 200 5324<socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34590)>
+[INFO] - 2019-05-06 17:12:46,746 : "GET /static/icon/e2.svg HTTP/1.1" 200 1929<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34598)>
+[INFO] - 2019-05-06 17:12:46,747 : "GET /static/icon/e1.svg HTTP/1.1" 200 1929<socket.socket fd=19, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34592)>
+[INFO] - 2019-05-06 17:12:46,756 : "GET /static/icon/images/edges.png HTTP/1.1" 200 27512<socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34594)>
+[INFO] - 2019-05-06 17:12:46,785 : "GET /static/icon/images/search.png HTTP/1.1" 200 1838<socket.socket fd=17, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34604)>
+[INFO] - 2019-05-06 17:12:46,786 : "GET /static/icon/images/reset.png HTTP/1.1" 200 446<socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34600)>
+[INFO] - 2019-05-06 17:12:46,786 : "GET /static/icon/images/info.png HTTP/1.1" 200 933<socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34602)>
+[INFO] - 2019-05-06 17:12:54,928 : "GET /searchuniversity/R HTTP/1.1" 200 1159<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34606)>
+[INFO] - 2019-05-06 17:12:55,062 : "GET /searchuniversity/RI HTTP/1.1" 200 1344<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34610)>
+[INFO] - 2019-05-06 17:18:04,221 : "GET / HTTP/1.1" 200 5727<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34644)>
+[INFO] - 2019-05-06 17:18:04,799 : "GET / HTTP/1.1" 200 5727<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34646)>
+[INFO] - 2019-05-06 17:19:10,831 : "GET / HTTP/1.1" 200 5727<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34654)>
+[INFO] - 2019-05-06 17:19:11,957 : "GET / HTTP/1.1" 200 5727<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34656)>
+[WARNING] - 2019-05-06 17:19:20,694 : Not Found: /addcontent<WSGIRequest: GET '/addcontent'>
+[WARNING] - 2019-05-06 17:19:20,698 : "GET /addcontent HTTP/1.1" 404 7042<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34658)>
+[INFO] - 2019-05-06 17:19:26,114 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34660)>
+[WARNING] - 2019-05-06 17:19:26,165 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 404 1667<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34662)>
+[WARNING] - 2019-05-06 17:19:26,166 : "GET /static/icon/uploading.gif HTTP/1.1" 404 1667<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34664)>
+[INFO] - 2019-05-06 17:24:12,174 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34668)>
+[WARNING] - 2019-05-06 17:24:12,222 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 404 1667<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34670)>
+[WARNING] - 2019-05-06 17:24:12,232 : "GET /static/icon/uploading.gif HTTP/1.1" 404 1667<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34672)>
+[INFO] - 2019-05-06 17:24:36,228 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34676)>
+[INFO] - 2019-05-06 17:24:38,845 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34674)>
+[WARNING] - 2019-05-06 17:24:38,888 : "GET /static/icon/uploading.gif HTTP/1.1" 404 1667<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34680)>
+[WARNING] - 2019-05-06 17:24:38,889 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 404 1667<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34678)>
+[INFO] - 2019-05-06 17:25:00,507 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34686)>
+[WARNING] - 2019-05-06 17:25:00,689 : "GET /static/icon/uploading.gif HTTP/1.1" 404 1667<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34690)>
+[WARNING] - 2019-05-06 17:25:00,691 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 404 1667<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34688)>
+[INFO] - 2019-05-06 17:25:19,181 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34694)>
+[INFO] - 2019-05-06 17:25:25,763 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34692)>
+[WARNING] - 2019-05-06 17:25:25,807 : "GET /static/icon/uploading.gif HTTP/1.1" 404 1667<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34698)>
+[WARNING] - 2019-05-06 17:25:25,810 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 404 1667<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34696)>
+[INFO] - 2019-05-06 17:29:01,372 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34700)>
+[INFO] - 2019-05-06 17:29:01,458 : "GET /static/icon/uploading.gif HTTP/1.1" 200 78737<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34704)>
+[INFO] - 2019-05-06 17:29:01,465 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 200 263268<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34702)>
+[ERROR] - 2019-05-06 17:29:52,897 : Internal Server Error: /contentsubmit<WSGIRequest: POST '/contentsubmit'>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/uamap/views.py", line 73, in contentsubmit
+    return JsonResponse(data)
+NameError: name 'JsonResponse' is not defined
+[ERROR] - 2019-05-06 17:29:52,944 : "POST /contentsubmit HTTP/1.1" 500 14819<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34706)>
+[INFO] - 2019-05-06 17:30:39,638 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34712)>
+[INFO] - 2019-05-06 17:30:39,719 : "GET /static/icon/uploading.gif HTTP/1.1" 200 78737<socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34714)>
+[INFO] - 2019-05-06 17:30:39,722 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 200 263268<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34710)>
+[ERROR] - 2019-05-06 17:30:53,606 : Internal Server Error: /contentsubmit<WSGIRequest: POST '/contentsubmit'>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/code/uamap/views.py", line 73, in contentsubmit
+    return JsonResponse(data)
+NameError: name 'JsonResponse' is not defined
+[ERROR] - 2019-05-06 17:30:53,633 : "POST /contentsubmit HTTP/1.1" 500 14824<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34716)>
+[INFO] - 2019-05-06 17:32:48,946 : "GET /addmycontent HTTP/1.1" 200 11828<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34722)>
+[INFO] - 2019-05-06 17:32:49,042 : "GET /static/icon/uploading.gif HTTP/1.1" 200 78737<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34724)>
+[INFO] - 2019-05-06 17:32:49,047 : "GET /static/js/jquery-3.0.0.js HTTP/1.1" 200 263268<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34720)>
+[INFO] - 2019-05-06 17:33:15,108 : "POST /contentsubmit HTTP/1.1" 200 80<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34726)>
+[WARNING] - 2019-05-06 17:33:15,141 : "GET /static/icon/pdf.png HTTP/1.1" 404 1649<socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34730)>
+[INFO] - 2019-05-06 17:35:14,636 : "POST /contentsubmit HTTP/1.1" 200 92<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34732)>
+[INFO] - 2019-05-06 17:35:14,682 : "GET /static/icon/pdf.png HTTP/1.1" 200 8456<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('172.18.0.4', 8000), raddr=('172.18.0.1', 34734)>

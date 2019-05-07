@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html lang="en" dir="ltr" class="lte-ie9 external-links ua-brand-icons sticky-footer"><![endif]-->
+<!--[if (gt IE 9)|(gt IEMobile 7)]><!--><html lang="en" dir="ltr" class="external-links ua-brand-icons sticky-footer"><!--<![endif]-->
+<html lang="en" class="external-links ua-brand-icons sticky-footer">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UAMAP: Add contents</title>
+
+    <!-- Latest icon font stylesheet -->
+    <link rel="stylesheet" href="https://cdn.uadigital.arizona.edu/lib/ua-brand-icons/latest/ua-brand-icons.css">
+    <!-- Compiled and minified UA Bootstrap CSS, icon font not included -->
+    <link rel="stylesheet" href="https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/v1.0.0-beta.15/ua-bootstrap.min.css">
+
+	<style>
+  .thumbnail{
+      width: 100%;
+      height: 60px;
+      padding: 2px;
+      border-radius: 3px;
+
+  }
+
+.upload-area{
+    width: 80%;
+
+    border: 2px solid lightgray;
+    border-radius: 3px;
+
+    overflow: auto;
+}
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
+</style>
+
+    <script type = "text/javascript" src = "static/js/jquery-3.0.0.js"></script>
+    <script type="text/javascript">
+
+
+
+
+$(function() {
+
+    // preventing page from redirecting
+    $("html").on("dragover", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $("#droptxt").text("Drag here");
+    });
+
+    $("html").on("drop", function(e) { e.preventDefault(); e.stopPropagation(); });
+
+    // Drag enter
+    $('.upload-area').on('dragenter', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $("#droptxt").text("Drop");
+    });
+
+    // Drag over
+    $('.upload-area').on('dragover', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $("#droptxt").text("Drop");
+    });
+
+    // Drop
+    $('.upload-area').on('drop', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+        $("#droptxt").text("Upload");
+
+        var file = e.originalEvent.dataTransfer.files;
+
+      if ($("#netid").val()=="")
+      {
+        alert("Please enter netid")
+        return 0;
+
+      }
+
+
+        for(i=0; i<file.length; i++){
+        var fd = new FormData();
+          fd.append('file', file[i]);
+          uploadData(fd);
+      }
+
+    });
+
+    // Open file selector on div click
+    $("#uploadfile").click(function(){
+
+        $("#file").click();
+    });
+
+    // file selected
+    $("#file").change(function(){
+
+  var file = $('#file')[0].files;
+      for(i=0; i<file.length; i++){
+      var fd = new FormData();
+        fd.append('file', file[i]);
+        uploadData(fd);
+    }
+
+    });
+});
+
+// Sending AJAX request and upload file
+function uploadData(formdata){
+fname=  formdata.get('file').name
+if ( fname.substr(fname.length-4, fname.length) !=".pdf") {
+  alert("Only pdf files are allowed")
+  return 0;
+}
+
+if ($("#netid").val()=="")
+{
+  alert("Please enter netid")
+  return 0;
+
+}
+
+
+
+$("#uploading").css('display', 'inline')
+$("#droptxt").text("Uploading");
+
+  var xformData = new FormData();
+  xformData.append('section', 'general');
+  xformData.append('action', 'previewImg');
+  // Attach file
+//  formData.append('image', $('input[type=file]')[0].files[0]);
+formdata.append('csrfmiddlewaretoken', $("input[name=csrfmiddlewaretoken]").val());
+formdata.append('netid', $("#netid").val());
+formdata.append('urls', $("#urls").val());
+
+formdata.append('category', $("#category").val());
+  $.ajax({
+      url: 'contentsubmit',
+       csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val() ,
+      data: formdata,
+      type: 'POST',
+      contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+      processData: false, // NEEDED, DON'T OMIT THIS
+      // ... Other options like success and etc
+      success: function(response){
+        console.log(response)
+          addThumbnail(response);
+
+      },
+      error: function(response){
+        console.log(response)
+     }
+
+  });
+
+
+
+//$.post("contentsubmit", { data:formdata, txt: "word", csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val() },   function(response){  addThumbnail(response);});
+
+/*
+    $.ajax({
+        url: 'contentsubmit',
+        type: 'post',
+        data: ' csrfmiddlewaretoken=' + $("input[name=csrfmiddlewaretoken]").val(),
+        contentType: false,
+        processData: false,
+        dataType: 'json',
+        success: function(response){
+            addThumbnail(response);
+        }
+    });
+    */
+}
+
+// Added thumbnail
+function addThumbnail(data){
+    console.log(data)
+    $("#uploadfile h1").remove();
+    var len = $("#uploadfile div.thumbnail").length;
+
+    var num = Number(len);
+    num = num + 1;
+
+    var name = data.name;
+    var size = convertSize(data.size);
+    var src = data.src;
+  var   category =data.category;
+    // Creating an thumbnail
+    $("#uploadfile").append('<div id="thumbnail_'+num+'" class="thumbnail"></div>');
+    $("#thumbnail_"+num).append('<table width=100%><tr   ><td width="80px"><img src=static/icon/pdf.png width="45px" ></td><td   width="100px"  class="align-middle" >'+category+'  </td> <td    class="align-middle" >'+name+' ('+size+')  </td></tr></table>');
+//    $("#thumbnail_"+num).append('<span class="size">'+name+'('+size+')<span> ');
+  //  $("#thumbnail_"+num).append('<span class="size">('+size+')<span>');
+$("#uploading").css('display', 'none')
+$("#droptxt").text("Drag and Drop file here");
+}
+
+// Bytes conversion
+function convertSize(size) {
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (size == 0) return '0 Byte';
+    var i = parseInt(Math.floor(Math.log(size) / Math.log(1024)));
+    return Math.round(size / Math.pow(1024, i), 2) + ' ' + sizes[i];
+}
+
+
+    </script>
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+  <header class="l-arizona-header bg-red" id="region_header_ua">
+    <section class="container l-container">
+      <div class="row"><a class="arizona-logo" href="http://www.arizona.edu" title="The University of Arizona homepage"><img class="arizona-line-logo" alt="The University of Arizona Wordmark Line Logo White" src="https://cdn.uadigital.arizona.edu/logos/v1.0.0/ua_wordmark_line_logo_white_rgb.min.svg"></a></div>
+    </section>
+  </header>
+
+  <div id="l_page">
+    <div id="header_site">
+      <div class="container">
+
+
+
+
+        <div class="row">
+          <div class="col-xs-12"><a class="sr-only sr-only-focusable" id="skippy" href="#content"></a>
+                        <div class="navbar navbar-default navbar-static-top" role="navigation">
+                          <div class="container">
+                            <div class="row">
+                              <div class="navbar-header">
+                                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span>
+                                  <!-- span.icon-bar-->
+                                  <!-- span.icon-bar-->
+                                  <!-- span.icon-bar--><span class="text">MAIN MENU</span>
+                                </button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-->
+    </div>
+    <!-- /#header_site-->
+
+    <div id="content_main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-md-push-3" id="content">
+<form id= "Cform" enctype="multipart/form-data" method="POST" >
+
+
+
+ <h1>Add my content</h1>
+ <h2>Net id</h2><input type=text id='netid' name=netid><br>
+ <h2>URL represent research (one url per line)</h2>
+ <textarea rows=10 cols=60 id=urls></textarea>
+ <h2>Files that represent my research(only pdf)</h2>
+ <select id="category"> <option selected>Publications</option>
+   <option>Grants</option>
+   <option>CV</option>
+   <option>Others</option>
+ </select>
+
+ <img id="uploading" style="display: none;" width="64px" src="static/icon/uploading.gif">
+  <input type="file" style="display:None" name="file" id="file" multiple>
+   <div class="upload-area"  id="uploadfile">
+
+     <h2 id="droptxt">Drag and Drop file here<br/>Or<br/>Click to select file</h2>
+      </div>
+
+ <h3> Data and files are saved automatically when you select/drag pdfs </h3>
+
+
+
+{% csrf_token %}
+            {{data |safe}}
+</form>
+<!---
+
+            <h1>UofA Collaborative Map</h1>
+
+
+            <h3> <a href="/cnetwork">  Map by considering  publications and research project proposals (v4)</a></h3>
+
+
+
+          <h1>GRAM: Global Research Activity Map</h1>
+
+
+          <table class="table table-hover" id="mapsubtype"> <tbody>
+          <tr><td><h3> <a href="/topics">Research Topics Map</h3></td></tr>
+          <tr><td><h4> <a href="/static/upload/rtopmap_dataset.html">GRAM: DataSet</h4></td></tr>
+          <tr><td><h4> <a href="/static/gallery/rtopmap_gallery.html">GRAM: Gallery </h4></td></tr>
+          </tbody></table>
+
+          <h1>Expert Matching</h1>
+
+
+            <table class="table table-hover" id="mapsubtype"> <tbody>
+            <tr><td> <h3> <a href="/searchV4">REMatch: Research Expert Matching System (V4)</h3></td></tr>
+            <tr><td> <h3> <a href="https://www.youtube.com/watch?v=P35ss7MMVwA">Video</h3></td></tr>
+            </tbody></table>
+
+-->
+
+          </div>
+          <!-- /.col-md-9-->
+          <!-- Sidebar-->
+          <div class="col-md-3 col-md-pull-9" id="sidebar_first">
+            <div class="quick-links">
+              <h3>UAMap</h3>
+
+			<ul class="nav nav-pills nav-stacked">
+			  <li><a href="/cnetwork">Collaboration Map</a></li>
+			  <li><a href="/topics">Topics Map</a></li>
+			  <li><a href="/searchV4">Expert Matching</a></li>
+			  <li><a href="/contributors">Contributors</a></li>
+			  <li><a href="#">Project Description</a></li>
+        <li><a href="#">Gallery</a></li>
+			  <li><a href="/publications">Publications</a></li>
+			  <li><a href="#">Contact</a></li>
+			</ul>
+
+            </div>
+
+          </div>
+          <!-- End Sidebar-->
+        </div>
+      </div>
+    </div>
+    <!-- /#content_main-->
+    <footer id="footer_site">
+      <div class="container">
+
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-center" id="footer_copyright">
+                The University of Arizona   |   Tucson, AZ USA 85721    <br>
+              Phone: (520) 621-2211  |  Bug/question/comment/feedback? Email:&nbsp;<a href="#">hossain@email.arizona.edu <br></a>© 2016 The Arizona Board of Regents on behalf of the University of Arizona   |&nbsp;<a href="#">Feedback</a>
+            </div>
+          </div>
+        </div>
+<div class="text-center">
+<i>
+This is a research project that utilizes multiple data sources that are believed to be reliable, no warranty, expressed or implied, is made regarding accuracy, adequacy, completeness. This information is provided on an "as is" basis and should not utilized beyond the expressed intent of visualizing collaboration networks.
+</i>
+</div>
+      </div>
+      <!-- /.container-->
+    </footer>
+  </div>
+  <!-- /#l_page-->
+
+
+</body>
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-100691823-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</html>
